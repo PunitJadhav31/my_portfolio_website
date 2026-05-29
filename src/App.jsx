@@ -4,6 +4,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -14,12 +15,7 @@ function App() {
       <Projects />
       <Experience />
       <Skills />
-
-      <section id="contact" className="min-h-screen px-6 py-24">
-        <div className="mx-auto max-w-7xl">
-          <p className="text-zinc-500">Contact section coming next...</p>
-        </div>
-      </section>
+      <Contact />
     </div>
   );
 }
