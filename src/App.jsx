@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
     <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
+      <About />
 
       <section id="projects" className="min-h-screen px-6 py-24">
         <div className="mx-auto max-w-7xl">
