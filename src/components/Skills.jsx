@@ -1,26 +1,35 @@
 import SectionTitle from "./SectionTitle";
+import MagicBentoCard from "./MagicBento";
 
 const skillCategories = [
   {
     title: "Programming & Data Analysis",
-    description: "Languages and libraries I use for analysis, automation, and modeling.",
+    description:
+      "Languages and libraries I use for data cleaning, exploratory analysis, automation, and structured problem-solving.",
+    icon: "⌘",
     skills: ["Python", "SQL", "R", "Pandas", "NumPy", "Excel"],
+    className: "lg:col-span-2",
   },
   {
     title: "Machine Learning",
-    description: "Modeling techniques and ML workflows used in predictive analytics projects.",
+    description:
+      "Predictive modeling workflows focused on classification, feature engineering, model evaluation, and business interpretation.",
+    icon: "✦",
     skills: [
       "scikit-learn",
       "XGBoost",
       "Random Forest",
       "Logistic Regression",
-      "Decision Trees",
       "Feature Engineering",
+      "Model Evaluation",
     ],
+    className: "lg:col-span-1",
   },
   {
     title: "Business Intelligence",
-    description: "Tools and methods for dashboards, KPI tracking, and stakeholder reporting.",
+    description:
+      "Dashboarding and reporting tools used to turn business data into clear, actionable insights for stakeholders.",
+    icon: "◈",
     skills: [
       "Power BI",
       "Tableau",
@@ -29,18 +38,22 @@ const skillCategories = [
       "Cohort Analysis",
       "Funnel Analysis",
     ],
+    className: "lg:col-span-1",
   },
   {
     title: "Data Engineering & Tools",
-    description: "Tools used for data pipelines, integrations, version control, and cloud basics.",
+    description:
+      "Tools and methods used for data pipelines, API integration, version control, cloud basics, and analytics workflows.",
+    icon: "◇",
     skills: [
       "ETL Pipelines",
       "REST APIs",
       "Git",
       "GitHub",
       "AWS Basics",
-      "Spark/Hadoop Familiar",
+      "PostgreSQL",
     ],
+    className: "lg:col-span-2",
   },
 ];
 
@@ -66,36 +79,21 @@ function Skills() {
     <section id="skills" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <SectionTitle
-  label="Skills"
-  title="Technical toolkit for data science, analytics, and business intelligence."
-  description="I work across the data workflow, from cleaning and transforming data to building dashboards, automating reporting, and developing machine learning models."
-/>
+          label="Skills"
+          title="Technical toolkit for data science, analytics, and business intelligence."
+          description="I work across the data workflow, from cleaning and transforming data to building dashboards, automating reporting, and developing machine learning models."
+        />
 
-        <div className="grid gap-6 lg:grid-cols-2">
+        <div className="grid gap-6 lg:grid-cols-3">
           {skillCategories.map((category) => (
-            <div
+            <MagicBentoCard
               key={category.title}
-              className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-emerald-400/40 hover:bg-white/[0.06] lg:p-8"
-            >
-              <h3 className="text-2xl font-bold text-white">
-                {category.title}
-              </h3>
-
-              <p className="mt-3 text-sm leading-7 text-zinc-400">
-                {category.description}
-              </p>
-
-              <div className="mt-6 flex flex-wrap gap-3">
-                {category.skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="rounded-full border border-white/10 bg-black/40 px-4 py-2 text-sm font-medium text-zinc-300 transition hover:border-emerald-400/40 hover:text-emerald-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
+              title={category.title}
+              description={category.description}
+              skills={category.skills}
+              icon={category.icon}
+              className={category.className}
+            />
           ))}
         </div>
 
@@ -121,7 +119,7 @@ function Skills() {
             {tools.map((tool) => (
               <div
                 key={tool}
-                className="flex min-h-24 items-center justify-center rounded-2xl border border-white/10 bg-black/40 p-4 text-center text-sm font-semibold text-zinc-300 transition hover:-translate-y-1 hover:border-emerald-400/40 hover:text-emerald-300"
+                className="group flex min-h-24 items-center justify-center rounded-2xl border border-white/10 bg-black/40 p-4 text-center text-sm font-semibold text-zinc-300 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-300"
               >
                 {tool}
               </div>
@@ -130,7 +128,7 @@ function Skills() {
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-emerald-400/40">
             <p className="text-3xl font-bold text-white">Python + SQL</p>
             <p className="mt-3 text-sm leading-7 text-zinc-400">
               Used for data cleaning, EDA, feature engineering, automation, and
@@ -138,7 +136,7 @@ function Skills() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-emerald-400/40">
             <p className="text-3xl font-bold text-white">Power BI</p>
             <p className="mt-3 text-sm leading-7 text-zinc-400">
               Built KPI dashboards for engagement, revenue, operations, and
@@ -146,7 +144,7 @@ function Skills() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6">
+          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-emerald-400/40">
             <p className="text-3xl font-bold text-white">ML Models</p>
             <p className="mt-3 text-sm leading-7 text-zinc-400">
               Applied classification models such as Logistic Regression, Random
