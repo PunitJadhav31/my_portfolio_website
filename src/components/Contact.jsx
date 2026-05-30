@@ -1,5 +1,6 @@
 import { useState } from "react";
 import SectionTitle from "./SectionTitle";
+import GlassSurface from "./GlassSurface";
 
 const contactLinks = [
   {
@@ -56,7 +57,7 @@ function Contact() {
 />
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
-          <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 lg:p-8">
+          <GlassSurface className="p-6 lg:p-8" rounded="rounded-3xl">
             <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">
               Get in touch
             </p>
@@ -101,7 +102,7 @@ function Contact() {
                 at Dallas.
               </p>
             </div>
-          </div>
+          </GlassSurface>
 
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 lg:p-8">
             <h3 className="text-2xl font-bold text-white">

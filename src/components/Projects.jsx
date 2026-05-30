@@ -1,5 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import SpotlightCard from "./SpotlightCard";
+import AnimatedList from "./AnimatedList";
 
 const projects = [
   {
@@ -103,23 +104,7 @@ function Projects() {
                 {project.description}
               </p>
 
-              <div className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5">
-                <p className="mb-4 text-sm font-semibold text-white">
-                  Key Impact
-                </p>
-
-                <ul className="space-y-3">
-                  {project.impact.map((point) => (
-                    <li
-                      key={point}
-                      className="flex gap-3 text-sm leading-6 text-zinc-400"
-                    >
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                      <span>{point}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <AnimatedList items={project.impact} title="Key Impact" />
 
               <div className="mt-6 flex flex-wrap gap-2">
                 {project.tools.map((tool) => (

@@ -1,4 +1,5 @@
 import SectionTitle from "./SectionTitle";
+import AnimatedList from "./AnimatedList";
 
 const experiences = [
   {
@@ -115,23 +116,7 @@ function Experience() {
                     {experience.description}
                   </p>
 
-                  <div className="mt-6 rounded-2xl border border-white/10 bg-black/40 p-5">
-                    <p className="mb-4 text-sm font-semibold text-white">
-                      Key Contributions
-                    </p>
-
-                    <ul className="space-y-3">
-                      {experience.points.map((point) => (
-                        <li
-                          key={point}
-                          className="flex gap-3 text-sm leading-6 text-zinc-400"
-                        >
-                          <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
-                          <span>{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  <AnimatedList items={experience.points} title="Key Contributions" />
 
                   <div className="mt-6 flex flex-wrap gap-2">
                     {experience.skills.map((skill) => (

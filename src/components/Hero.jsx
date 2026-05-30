@@ -1,4 +1,5 @@
 import BlurText from "./BlurText";
+import GlassSurface from "./GlassSurface";
 
 function Hero() {
   return (
@@ -105,7 +106,7 @@ function Hero() {
         </div>
 
         <div className="relative mx-auto w-full max-w-md">
-          <div className="rounded-[2rem] border border-white/10 bg-white/[0.04] p-6 shadow-2xl shadow-emerald-500/10">
+          <GlassSurface className="p-6">
             <div className="flex h-80 items-center justify-center rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-zinc-900 to-black">
               <div className="text-center">
                 <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 text-4xl font-bold text-emerald-300">
@@ -134,7 +135,7 @@ function Hero() {
                 <p className="mt-1 font-medium text-white">Data Science</p>
               </div>
             </div>
-          </div>
+          </GlassSurface>
         </div>
       </div>
     </section>
