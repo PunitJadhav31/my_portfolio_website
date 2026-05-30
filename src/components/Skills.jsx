@@ -1,3 +1,5 @@
+import SectionTitle from "./SectionTitle";
+
 const skillCategories = [
   {
     title: "Programming & Data Analysis",
@@ -63,22 +65,11 @@ function Skills() {
   return (
     <section id="skills" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-            Skills
-          </p>
-
-          <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Technical toolkit for data science, analytics, and business
-            intelligence.
-          </h2>
-
-          <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-            I work across the data workflow, from cleaning and transforming
-            data to building dashboards, automating reporting, and developing
-            machine learning models.
-          </p>
-        </div>
+        <SectionTitle
+  label="Skills"
+  title="Technical toolkit for data science, analytics, and business intelligence."
+  description="I work across the data workflow, from cleaning and transforming data to building dashboards, automating reporting, and developing machine learning models."
+/>
 
         <div className="grid gap-6 lg:grid-cols-2">
           {skillCategories.map((category) => (

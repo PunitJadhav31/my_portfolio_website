@@ -1,3 +1,5 @@
+import SectionTitle from "./SectionTitle";
+
 function About() {
   const highlights = [
     {
@@ -33,24 +35,11 @@ function About() {
   return (
     <section id="about" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-            About Me
-          </p>
-
-          <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            I connect data, business, and machine learning to solve real
-            problems.
-          </h2>
-
-          <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-            I am a Data Science and Business Analytics graduate student at UT
-            Dallas with hands-on experience in data analysis, BI dashboards,
-            ETL pipelines, reporting automation, and predictive modeling. I
-            enjoy transforming messy datasets into clear insights that help
-            teams make better decisions.
-          </p>
-        </div>
+        <SectionTitle
+  label="About Me"
+  title="I connect data, business, and machine learning to solve real problems."
+  description="I am a Data Science and Business Analytics graduate student at UT Dallas with hands-on experience in data analysis, BI dashboards, ETL pipelines, reporting automation, and predictive modeling. I enjoy transforming messy datasets into clear insights that help teams make better decisions."
+/>
 
         <div className="grid gap-6 lg:grid-cols-3">
           {highlights.map((item) => (

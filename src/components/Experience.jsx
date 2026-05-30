@@ -1,3 +1,5 @@
+import SectionTitle from "./SectionTitle";
+
 const experiences = [
   {
     company: "Embed Square Solutions Pvt. Ltd.",
@@ -53,22 +55,11 @@ function Experience() {
   return (
     <section id="experience" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-            Experience
-          </p>
-
-          <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Real-world analytics experience across dashboards, pipelines, and
-            business insights.
-          </h2>
-
-          <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-            My professional work combines data analysis, BI reporting,
-            automation, stakeholder communication, and hands-on technical
-            implementation using Python, SQL, Power BI, and Excel.
-          </p>
-        </div>
+        <SectionTitle
+  label="Experience"
+  title="Real-world analytics experience across dashboards, pipelines, and business insights."
+  description="My professional work combines data analysis, BI reporting, automation, stakeholder communication, and hands-on technical implementation using Python, SQL, Power BI, and Excel."
+/>
 
         <div className="relative">
           <div className="absolute left-4 top-0 hidden h-full w-px bg-white/10 lg:block" />

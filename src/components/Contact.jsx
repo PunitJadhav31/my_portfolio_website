@@ -1,4 +1,5 @@
 import { useState } from "react";
+import SectionTitle from "./SectionTitle";
 
 const contactLinks = [
   {
@@ -48,21 +49,11 @@ function Contact() {
   return (
     <section id="contact" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-14">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-            Contact
-          </p>
-
-          <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            Let’s connect and build something data-driven.
-          </h2>
-
-          <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-            I am open to Data Science, Data Analyst, Business Intelligence, and
-            Analytics internship opportunities where I can apply Python, SQL,
-            Power BI, and machine learning to solve real business problems.
-          </p>
-        </div>
+        <SectionTitle
+  label="Contact"
+  title="Let’s connect and build something data-driven."
+  description="I am open to Data Science, Data Analyst, Business Intelligence, and Analytics internship opportunities where I can apply Python, SQL, Power BI, and machine learning to solve real business problems."
+/>
 
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-6 lg:p-8">

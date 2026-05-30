@@ -1,3 +1,5 @@
+import BlurText from "./BlurText";
+
 function Hero() {
   return (
     <section
@@ -10,19 +12,31 @@ function Hero() {
       <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
-            Open to Summer 2026 Data Science & Analytics Internships
-          </div>
+  Open to Summer 2026 Data Science & Analytics Internships
+</div>
 
-          <h1 className="max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-            Hi, I’m{" "}
-            <span className="bg-gradient-to-r from-emerald-300 to-blue-400 bg-clip-text text-transparent">
-              Punit Jadhav
-            </span>
-          </h1>
+<h1 className="max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+  <span className="block">
+    <BlurText text="Hi, I’m" delay={130} animateBy="words" />
+  </span>
 
-          <h2 className="mt-5 max-w-3xl text-2xl font-medium text-zinc-300 sm:text-3xl">
-            Data Scientist | Business Analytics & AI Graduate Student
-          </h2>
+  <span className="group mt-2 inline-block transition duration-300 hover:scale-[1.03]">
+    <BlurText
+      text="Punit Jadhav"
+      delay={160}
+      animateBy="words"
+      wordClassName="bg-gradient-to-r from-emerald-300 to-blue-400 bg-clip-text text-transparent transition duration-300 group-hover:from-blue-400 group-hover:to-emerald-300 group-hover:drop-shadow-[0_0_18px_rgba(16,185,129,0.45)]"
+    />
+  </span>
+</h1>
+
+<h2 className="mt-5 max-w-3xl text-2xl font-medium text-zinc-300 sm:text-3xl">
+  <BlurText
+    text="Data Scientist | Business Analytics & AI Graduate Student"
+    delay={70}
+    animateBy="words"
+  />
+</h2>
 
           <p className="mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
             I build data-driven solutions using Python, SQL, Power BI, and

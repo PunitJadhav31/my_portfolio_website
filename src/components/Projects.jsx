@@ -1,3 +1,6 @@
+import SectionTitle from "./SectionTitle";
+import SpotlightCard from "./SpotlightCard";
+
 const projects = [
   {
     title: "Customer Churn Prediction & Retention Analytics",
@@ -62,22 +65,11 @@ function Projects() {
     <section id="projects" className="bg-black px-6 py-24">
       <div className="mx-auto max-w-7xl">
         <div className="mb-14 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-          <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-[0.3em] text-emerald-400">
-              Featured Projects
-            </p>
-
-            <h2 className="max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-5xl">
-              Practical data projects built around business impact.
-            </h2>
-
-            <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400 sm:text-lg">
-              These projects highlight my work across machine learning,
-              business intelligence, predictive modeling, ETL pipelines, and
-              analytics automation.
-            </p>
-          </div>
-
+          <SectionTitle
+  label="Featured Projects"
+  title="Practical data projects built around business impact."
+  description="These projects highlight my work across machine learning, business intelligence, predictive modeling, ETL pipelines, and analytics automation."
+/>
           <a
             href="https://github.com/PunitJadhav31"
             target="_blank"
@@ -90,10 +82,7 @@ function Projects() {
 
         <div className="grid gap-6 lg:grid-cols-2">
           {projects.map((project, index) => (
-            <article
-              key={project.title}
-              className="group rounded-3xl border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-white/[0.06]"
-            >
+            <SpotlightCard key={project.title} className="p-6">
               <div className="mb-6 flex items-start justify-between gap-4">
                 <div>
                   <p className="text-sm font-medium text-emerald-300">
@@ -160,7 +149,7 @@ function Projects() {
                   Case Study
                 </a>
               </div>
-            </article>
+            </SpotlightCard>
           ))}
         </div>
       </div>

@@ -7,6 +7,7 @@ import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import SectionDivider from "./components/SectionDivider";
+import SplashCursor from "./components/SplashCursor";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
       </main>
 
       <ScrollToTop />
+      
     </div>
   );
 }
