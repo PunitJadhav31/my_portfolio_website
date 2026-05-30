@@ -8,7 +8,6 @@ import Contact from "./components/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import SectionDivider from "./components/SectionDivider";
 import SplashCursor from "./components/SplashCursor";
-import Dock from "./components/Dock";
 
 function App() {
   return (
@@ -36,8 +35,7 @@ function App() {
 
       <ScrollToTop />
       <SplashCursor />
-      <Dock />
-      
+
     </div>
   );
 }
