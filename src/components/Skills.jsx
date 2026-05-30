@@ -1,5 +1,6 @@
 import SectionTitle from "./SectionTitle";
 import MagicBentoCard from "./MagicBento";
+import GlassIconCard from "./GlassIconCard";
 
 const skillCategories = [
   {
@@ -58,20 +59,76 @@ const skillCategories = [
 ];
 
 const tools = [
-  "Python",
-  "SQL",
-  "Power BI",
-  "Tableau",
-  "Excel",
-  "Pandas",
-  "NumPy",
-  "scikit-learn",
-  "XGBoost",
-  "Git",
-  "GitHub",
-  "REST APIs",
-  "AWS",
-  "VS Code",
+  {
+    name: "Python",
+    shortName: "Py",
+    category: "Programming",
+  },
+  {
+    name: "SQL",
+    shortName: "SQL",
+    category: "Database",
+  },
+  {
+    name: "Power BI",
+    shortName: "BI",
+    category: "Dashboarding",
+  },
+  {
+    name: "Tableau",
+    shortName: "Tb",
+    category: "Visualization",
+  },
+  {
+    name: "Excel",
+    shortName: "XL",
+    category: "Analysis",
+  },
+  {
+    name: "Pandas",
+    shortName: "Pd",
+    category: "Python Library",
+  },
+  {
+    name: "NumPy",
+    shortName: "Np",
+    category: "Python Library",
+  },
+  {
+    name: "scikit-learn",
+    shortName: "SK",
+    category: "Machine Learning",
+  },
+  {
+    name: "XGBoost",
+    shortName: "XGB",
+    category: "ML Model",
+  },
+  {
+    name: "Git",
+    shortName: "Git",
+    category: "Version Control",
+  },
+  {
+    name: "GitHub",
+    shortName: "GH",
+    category: "Code Hosting",
+  },
+  {
+    name: "REST APIs",
+    shortName: "API",
+    category: "Integration",
+  },
+  {
+    name: "AWS",
+    shortName: "AWS",
+    category: "Cloud",
+  },
+  {
+    name: "VS Code",
+    shortName: "VS",
+    category: "IDE",
+  },
 ];
 
 function Skills() {
@@ -97,7 +154,7 @@ function Skills() {
           ))}
         </div>
 
-        <div className="mt-16 rounded-3xl border border-white/10 bg-white/[0.03] p-6 lg:p-8">
+        <div className="mt-16 rounded-3xl border border-white/10 bg-white/[0.03] p-6 shadow-2xl shadow-emerald-500/5 backdrop-blur-xl lg:p-8">
           <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">
@@ -116,15 +173,15 @@ function Skills() {
           </div>
 
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-7">
-            {tools.map((tool) => (
-              <div
-                key={tool}
-                className="group flex min-h-24 items-center justify-center rounded-2xl border border-white/10 bg-black/40 p-4 text-center text-sm font-semibold text-zinc-300 transition duration-300 hover:-translate-y-1 hover:border-emerald-400/40 hover:bg-emerald-400/10 hover:text-emerald-300"
-              >
-                {tool}
-              </div>
-            ))}
-          </div>
+  {tools.map((tool) => (
+    <GlassIconCard
+      key={tool.name}
+      name={tool.name}
+      shortName={tool.shortName}
+      category={tool.category}
+    />
+  ))}
+</div>
         </div>
 
         <div className="mt-16 grid gap-6 md:grid-cols-3">
