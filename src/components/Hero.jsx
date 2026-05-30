@@ -1,16 +1,18 @@
 import BlurText from "./BlurText";
 import GlassSurface from "./GlassSurface";
 
+
 function Hero() {
   return (
     <section
       id="home"
       className="relative flex min-h-screen items-center overflow-hidden bg-black px-6 pt-28"
     >
+
       <div className="absolute left-1/2 top-24 h-72 w-72 -translate-x-1/2 rounded-full bg-emerald-500/20 blur-3xl" />
       <div className="absolute bottom-20 right-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
 
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
+      <div className="relative z-20 mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
         <div>
           <div className="mb-6 inline-flex rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-zinc-300">
   Open to Summer 2026 Data Science & Analytics Internships
@@ -109,18 +111,25 @@ function Hero() {
           <GlassSurface className="p-6">
             <div className="flex h-80 items-center justify-center rounded-[1.5rem] border border-white/10 bg-gradient-to-br from-zinc-900 to-black">
               <div className="text-center">
-                <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border border-emerald-400/30 bg-emerald-400/10 text-4xl font-bold text-emerald-300">
-                  PJ
-                </div>
+                <div className="mx-auto h-32 w-32 overflow-hidden rounded-full border border-emerald-400/40 bg-emerald-400/10 p-1 shadow-2xl shadow-emerald-400/20">
+  <img
+    src="/profile_img.jpeg"
+    alt="Punit Jadhav"
+    className="h-full w-full rounded-full object-cover object-[center_22%]"
+  />
+</div>
 
                 <h3 className="mt-6 text-xl font-semibold text-white">
-                  Data Science Portfolio
-                </h3>
+  Punit Jadhav
+</h3>
 
-                <p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-zinc-400">
-                  Python • SQL • Power BI • Machine Learning • Analytics
-                  Automation
-                </p>
+<p className="mx-auto mt-2 max-w-xs text-sm leading-6 text-zinc-400">
+  Data Science • Business Analytics • AI
+</p>
+
+<p className="mx-auto mt-3 max-w-xs text-sm leading-6 text-zinc-400">
+  Python • SQL • Power BI • Machine Learning • Analytics Automation
+</p>
               </div>
             </div>
 
